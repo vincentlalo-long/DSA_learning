@@ -8,10 +8,10 @@ Thuật toán 4. Thuật toán tối ưu:
 • Lần lượt xem xét các phim trong danh sách đã sắp xếp, bổ sung vào danh sách
 xem bộ phim đang xét nếu nó không trùng với các bộ phim đã có trong danh
 sách xem."""
-#Code C/C++:
+//Code C/C++:
 #include <stdio.h>
 #include<stdlib.h>
-typedef struct{ #tạo hàm struct để định nghĩa ra cặp start-end
+typedef struct{ //tạo hàm struct để định nghĩa ra cặp start-end
     double start;
     double end;
 }Movie;
