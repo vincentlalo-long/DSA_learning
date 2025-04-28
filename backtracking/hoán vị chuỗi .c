@@ -3,23 +3,30 @@
 
 #include <stdio.h>
 #include<string.h>
+#include<stdbool.h>
 // Bài toán liệt kê hoán vị xâu
 void swap(char *a,char*b){
     char temp=*a;
     *a=*b;
     *b=temp;
-} // Hoán đổi 2 kí tự
+}
 void generate_string(char *str,int left , int right){
     if(left==right) {
         printf("%s",str);
         printf("\n");
     }
     else{
+        bool visited[256]={false};
         for(int i=left;i<=right;i++){
-            swap(&str[i],&str[left]);
-            generate_string(str,left+1,right);
-            swap(&str[left],&str[i]); // Hoán đổi lại để tiếp tục backtrack 
+            if(!visited[(unsigned char)str[i]]){ // ép kiểu str[i] về chữ số có dấu nên đổi sang hệ ACSII sẽ là số dương
+                visited[(unsigned char)str[i]]=true;        
+            
+                swap(&str[i],&str[left]);
+            
+                generate_string(str,left+1,right);
+                swap(&str[left],&str[i]);
         }   
+        }
     }
     
 }
@@ -30,6 +37,5 @@ int main() {
 	int strle=strlen(str);
 	generate_string(str,0,strle-1);
 
-} 
-// T(n)=n.O(n!)
+}
 
