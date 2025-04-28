@@ -30,5 +30,6 @@ int main() {
 	int strle=strlen(str);
 	generate_string(str,0,strle-1);
 
-}
+} 
+// T(n)=n.O(n!)
 
