@@ -1,0 +1,23 @@
+ Thuật toán quay lui 
+• Là một cải tiến của lớp các bài toán vét cạn – brute force
+• Tại một thời điểm chỉ thử đi theo theo một hướng chứ không thử đồng thời tất cả các
+khả năng (dùng ít bộ nhớ phụ hơn) 
+• Nếu hướng hiện tại gặp bế tắc – dead end, quay lại và thử đi theo hướng mới 
+• Từng bước xây dựng lời giải bộ phận để thu được lời giải cuối cùng 
+• Trong trường hợp tồi nhất thuật toán vẫn phải vét cạn hết tất cả các khả năng có thể có trong không gian các phương án tiềm năng
+• Để chứng minh bài toán không có lời giải, cần phải vét hết toàn bộ không gian tìm kiếm
+• Nếu không gian bài toán lớn, thời gian tìm lời giải có thể rất lâu
+• Thường cài đặt đơn giản dùng đệ quy, thay vì dùng vòng lặp (vẫn có thể cài đặt bằng vòng lặp được
+
+// Sơ đồ tổng quát : 
+Solve_from (Current_config) {
+if (Current_config đã chứa lời giải đầy đủ)
+    print Current_config
+else
+  Với tập các lựa chọn chưa được xét đến trong Current_config{
+  Thêm 1 lựa chọn P;
+  Cập nhật lại Current_config;
+  solve_from(Current_config);
+  Loại bỏ lựa chọn P khỏi Current_config; //quay lui
+}
+}
