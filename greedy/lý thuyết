@@ -1,0 +1,31 @@
+• Thuật toán tham lam
+• Xây dựng lời giải từng bước (tương tự back tracking hoặc nhánh cận)
+• Luôn lựa chọn phương án tiếp theo là cái dễ thấy và đem lại lợi ích ngày trước mắt
+(tham lam)
+• Tại mỗi bước, phương án tốt nhất đựa trên quan sát hiện tại sẽ được lựa chọn
+• Phù hợp với các bài toán mà chỉ có 1 cực trị toàn. Lời giải tối ưu toàn cục tìm bằng
+cách tìm bước đi tối ưu ở mỗi bước chọn.
+• Không phù hợp với các bài toán tối ưu phức tạp, có nhiều cực trị địa phương
+
+• Lời giải được biểu diễn bởi tập S
+• C biểu diễn các ứng cử viên
+• select(C): chọn ra ứng cử viên tiềm năng
+nhất
+• solution(S): trả về true nếu S là lời giải của
+bài toán
+• feasible(S): trả về true nếu S không vi phạm
+ràng buộc nào của bài toán
+
+// mã giả : 
+Greedy() {
+   S = {};
+   while C   and
+   not solution(S){
+   x = select(C);
+   C = C \ {x};
+   if feasible(S  {x}) {
+   S = S  {x};
+   }
+   }
+   return S;
+  }
