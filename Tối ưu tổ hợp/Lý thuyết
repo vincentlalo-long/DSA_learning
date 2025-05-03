@@ -1,0 +1,12 @@
+Bài toán tối ưu hóa
+• Bài toán tối ưu hóa
+• Tìm kiếm lời giải tốt nhất trong những lời giải khả thi
+• Nếu đầu vào là rời rạc → Bài toán tối ưu tổ hợp
+• Bài toán tối ưu tổ hợp
+• Không gian tìm kiếm là "hữu hạn hoặc vô hạn đếm được"
+• Thỏa mãn tập ràng buộc C
+• Với mục đích tối ưu hàm mục tiêu, f(x) → min (max)
+• Phương án giải
+• Có thể vét cạn hết không gian lời giải khả thi
+• Xây dựng từng bước lời giải
+• Giải gần đúng (xấp xỉ)
