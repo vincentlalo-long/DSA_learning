@@ -1,0 +1,23 @@
+Thuật toán nhánh cận
+• Là một cải tiến của thuật toán quay lui – back tracking
+• Áp dụng để giải các bài toán tối ưu tổ hợp
+• Thuật toán đi xây dựng lời giải từng bước, thường biểu diễn dưới dạng cây trạng thái,
+mỗi nút là 1 bộ phận của lời giải cuối cùng
+• Tại mỗi nút (lời giải bộ phận) sẽ tính toán 1 giá trị giới hạn dựa trên hàm mục tiêu cho
+các nút con, cháu (phần tiếp theo của lời giải) của nó.
+• Giá trị giới hạn – bound đó dùng để
+• Cắt tỉa các nhánh mà không tiềm năng (cắt bỏ các nhánh mà giá trị giới hạn này tồi
+hơn giá trị tốt nhất hiện có) → tránh phải duyệt hết các nhánh không tiềm năng
+• Dùng để định hướng quá trình duyệt qua cây trạng thái (VD. ưu tiên các nhanh tiềm
+năng –có giá trị bound tốt nhất trước)
+
+
+• Không gian trạng thái của bài toán
+• Chứa tất cả các trạng thái có thể
+• Thường được biểu diễn dưới dạng đồ thị hoặc cây
+• Trạng thái khởi đầu: là lời giải ban đầu của bài toán (chưa tối ưu)
+• Trạng thái đích: là lời giải cuối cùng cần đạt được
+• Có các luật quy định về việc chuyển giữa các trạng thái
+• Thuật toán có thể được hiểu dưới dạng 1 bài toán tìm đường đi từ trạng thái khởi đầu
+về trạng thái đích
+• Phù hợp nhất với các bài toán giải đố, game,..
