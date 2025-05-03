@@ -32,3 +32,22 @@ int main() {
 
 }
 
+
+// selection sort ngược : tức là ta xét từ cuối lên và tìm phần tử lớn nhất trong các phần tử còn lại trừ các phần tử đã xét trước rồi 
+
+void reverse_selection_sort(int arr_size, int* a) {
+    for (int i = arr_size; i >= 2; i--) {
+        int max_idx = 0;
+        for (int j = 1; j < i; j++) {
+            if (a[j] > a[max_idx]) {
+                max_idx = j;
+            }
+        }
+        swap(&a[max_idx], &a[i - 1]);
+    }
+}
+
+    return 0;
+}
+
+
