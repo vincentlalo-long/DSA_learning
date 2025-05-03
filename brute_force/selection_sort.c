@@ -32,7 +32,7 @@ int main() {
 
 }
 
-
+// T(n)=O(n^2)
 // selection sort ngược : tức là ta xét từ cuối lên và tìm phần tử lớn nhất trong các phần tử còn lại trừ các phần tử đã xét trước rồi 
 
 void reverse_selection_sort(int arr_size, int* a) {
