@@ -1,0 +1,22 @@
+-Thuật toán vét cạn : brute force (exhausitive search) :
+  • Là một dạng của thuật toán dạng “sinh và test” – sinh ra phương án và kiểm tra lại xem
+  có đáp ứng ràng buộc của bài toán
+  • Đây là cách thiết kế thuật toán đơn giản nhất (chỉ cần nhìn vào phát biểu bài toán là tạo
+  ra thuật toán được), dựa vào khả năng tính toán của máy tính
+  • Hiệu quả của thuật toán không cao, nhất là khi kích thước đầu vào lớn
+  • Một số bài toán phức tạp không thể giải bằng phương pháp vét cạn được (không gian
+  tìm kiếm phương án có thể quá lớn, vượt khả năng tính toán của máy tính)
+  • Có thể kết hợp thêm với một số kỹ thuật khác (heuristics methods) để giảm bớt không
+  gian cần tìm kiếm lời giải
+  • Dùng để giải các bài toán khi mà yêu cầu về thời gian chạy không phải là yếu tố đáng
+  quan tâm (VD. chỉ cần tìm ra lời giải là được)
+
+  
+  • Trong thuật toán luôn có 2 pha là sinh lựa chọn và kiểm tra
+  • Có thể sinh lựa chọn là 1 phương án đầy đủ, hoặc từng bước sinh 1 phần của
+  phương án (VD. thuật toán back tracking)
+  • Pha kiểm tra:
+  • xem phương án sinh ra có thỏa mãn là một lời giải của bài toán hay không,
+  • thường dựa ngay chính vào mô tả ban đầu
+  • Hoặc dùng chính hàm đích cần đạt được của bài toán làm hàm kiểm tra
+  • Bước kiểm tra đôi khi có thể gộp luôn vào quá trình sinh
