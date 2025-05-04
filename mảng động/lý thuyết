@@ -1,0 +1,107 @@
+so sánh malloc , calloc , realloc : (by chatgpt)
+
+---
+
+## ✅ 1. `malloc` – Memory Allocation (cấp phát bộ nhớ thô)
+
+### ➤ Cú pháp:
+
+```c
+void* malloc(size_t size);
+```
+
+* Cấp phát `size` byte bộ nhớ.
+* Bộ nhớ được **cấp phát nhưng chưa được khởi tạo** → chứa **giá trị rác**.
+
+### 📌 Ví dụ:
+
+```c
+int* a = (int*)malloc(5 * sizeof(int));  // Cấp phát mảng 5 số nguyên
+```
+
+* Sau lệnh này: `a[0]` đến `a[4]` có giá trị **không xác định** (rác).
+* Nếu bạn dùng ngay mà chưa gán, sẽ dễ gặp lỗi.
+
+---
+
+## ✅ 2. `calloc` – Contiguous Allocation (cấp phát kèm khởi tạo)
+
+### ➤ Cú pháp:
+
+```c
+void* calloc(size_t n, size_t size);
+```
+
+* Cấp phát vùng nhớ cho `n` phần tử, mỗi phần tử có `size` byte.
+* **Tự động khởi tạo toàn bộ giá trị về 0**.
+
+### 📌 Ví dụ:
+
+```c
+int* b = (int*)calloc(5, sizeof(int));  // Cấp phát mảng 5 số nguyên và khởi tạo bằng 0
+```
+
+* Sau lệnh này: `b[0] = b[1] = ... = b[4] = 0`.
+
+---
+
+## ✅ 3. `realloc` – Reallocation (thay đổi kích thước bộ nhớ)
+
+### ➤ Cú pháp:
+
+```c
+void* realloc(void* ptr, size_t new_size);
+```
+
+* Dùng để **thay đổi kích thước vùng nhớ** đã được cấp phát bởi `malloc` hoặc `calloc`.
+* Nếu cần, nó sẽ **cấp phát lại vùng nhớ mới**, **copy dữ liệu cũ sang**, và **giải phóng vùng cũ**.
+
+### 📌 Ví dụ:
+
+```c
+int* a = (int*)malloc(5 * sizeof(int));
+a = (int*)realloc(a, 10 * sizeof(int));  // Mở rộng lên 10 phần tử
+```
+
+* Dữ liệu từ `a[0]` đến `a[4]` được giữ nguyên.
+* `a[5]` đến `a[9]` có **giá trị rác** (nếu dùng `malloc` trước đó).
+
+---
+
+## ⚠️ Cảnh báo khi dùng `realloc`:
+
+```c
+int* tmp = realloc(ptr, new_size);
+if (tmp == NULL) {
+    // Thất bại, vùng cũ vẫn giữ nguyên
+} else {
+    ptr = tmp;
+}
+```
+
+→ Luôn gán vào biến tạm để **tránh mất con trỏ gốc** nếu `realloc` thất bại.
+
+---
+
+## 🧠 Tổng kết so sánh
+
+| Hàm       | Khởi tạo bộ nhớ    | Có thể thay đổi kích thước? | Khi nào dùng?                            |
+| --------- | ------------------ | --------------------------- | ---------------------------------------- |
+| `malloc`  | ❌ Không            | ❌ Không                     | Khi bạn muốn cấp phát nhanh, tự khởi tạo |
+| `calloc`  | ✅ Có (giá trị 0)   | ❌ Không                     | Khi bạn cần vùng nhớ sạch (zero)         |
+| `realloc` | ❌ (giữ dữ liệu cũ) | ✅ Có                        | Khi bạn cần mở rộng/thay đổi bộ nhớ      |
+
+---
+
+Mảng động dynamic array
+• Lưu trữ dữ liệu có kích thước biến đổi • List/ArrayList • Dữ liệu trung gian trong thuật toán sắp xếp
+• Bộ nhớ đệm – buffer khi truyền tải dữ liệu
+• Xử lý xâu ký tự có độ dài không cố định
+• Cài đặt stack – queue
+• Bảng băm – HashTable
+• Lưu trữ ảnh, video với độ phân giải khác nhau
+Quản lý bộ nhớ trong hệ thống nhúng, IoT
+• Kích thước bộ nhớ hạn chế, cấp phát tĩnh sẽ
+gây lãng phí • Kích thước dữ liệu không cố định (VD. Số lượng mẫu cảm biến tùy vào từngthời điểm) • Kích thước các gói tin truyền không cố định
+• Quản lý bộ đệm nhận dữ liệu
+• Phân vùng bộ nhớ động tại thời điểm chạy
