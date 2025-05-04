@@ -1,0 +1,47 @@
+• Thuật toán quy hoạch động – Dynamic programming
+• Có cách tiếp cận tương tự chia để trị, chia nhỏ bài toán lớn thành các bài toán con
+• Các bài toán con thường không độc lập (có thể overlap lẫn nhau)
+• Lời giải các bài toán con được tổng hợp lại để thu được lời giải các bài toán lớn
+hơn (hoặc các bài toán overlap với bài toán con đó)
+• Lời giải các bài toán con thường được lưu vào bảng tra để tránh phải giải lại nhiều
+lần
+• Có 2 cách tiếp cận
+• Top down với bảng tra
+• Bottom up với Tabulation
+
+Top-down với bảng tra - Memoization
+Bottom-up với Tabulation
+  Giải bài toán theo chiều từ dưới lên (giải
+các bài toán nhỏ trước)
+• Lời giải cũng được lưu trong bảng
+
+1. Top-down (với bảng tra - memoization)
+✅ Ý tưởng:
+Bắt đầu từ bài toán lớn nhất, đệ quy gọi xuống các bài toán con nhỏ hơn.
+
+Nếu bài toán con đã được giải trước đó, tra lại từ bảng (memo) để tránh tính lại.
+
+Thường sử dụng đệ quy + mảng nhớ (memoization).
+
+📌 Đặc điểm:
+Dễ cài đặt nếu đã có công thức đệ quy.
+
+Không tính thừa, tiết kiệm thời gian so với đệ quy thuần túy.
+
+Vẫn dùng call stack, có thể bị stack overflow nếu độ sâu lớn.
+
+  
+ 2. Bottom-up (với tabulation)
+✅ Ý tưởng:
+Bắt đầu từ bài toán nhỏ nhất, xây dần lời giải lên trên đến bài toán lớn.
+
+Dùng bảng (mảng) để lưu tất cả kết quả trung gian.
+
+Không dùng đệ quy.
+
+📌 Đặc điểm:
+Không dùng stack → tránh tràn stack.
+
+Dễ tối ưu bộ nhớ nếu chỉ cần giữ vài giá trị gần nhất.
+
+Đôi khi khó viết hơn nếu công thức đệ quy phức tạp.  
