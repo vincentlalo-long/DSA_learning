@@ -1,0 +1,13 @@
+• Con trỏ lưu trữ địa chỉ của một vị trí trong bộ nhớ.
+VD. Visiting card có thể xem như con trỏ trỏ đến nơi
+làm việc của một người nào đó. • Trong cấu trúc liên kết con trỏ được dùng
+để liên kết giữa các phần tử. • Trong C/C++ : • *ptr chỉ ptr là một biến con trỏ
+• &i chỉ địa chỉ của biến i trong bộ nhớ (địa chỉ ô nhớ đầu tiên) • Con trỏ khi mới khởi tạo nhận giá trị NULL - con trỏ chưa được gán giá trị
+(không trỏ vào đâu cả) • Kiểu của con trỏ để xác định phạm vi bộ nhớ có thể truy cập
+• Các con trỏ có cùng kích thước trên 1 platform
+
+Cấu trúc liên kết • Các phần tử nằm rải rác trong bộ nhớ
+• Phần tử trước sẽ lưu lại địa chỉ phần tử tiếp theo (qua con trỏ) • Các phần tử chỉ có thể truy cập một cách tuần tự
+• Việc thêm/xóa phần tử đơn giản hơn so với cấu trúc liên tiếp (mảng) • Mỗi phần tử cần thêm ít nhất 1 con trỏ để duy trì liên kết trong cấu trúc (con
+trỏ được coi là bộ nhớ lãng phí dưới góc độ người dùng) • Một số đại diện cấu trúc liên kết • Danh sách liên kết: danh sách liên kết đơn, danh sách liên kết đôi,…• Cây: cây nhị phân tổng quát, cây AVL, R-B tree, kD tree, prefix tree… • Đồ thị lưu bằng ma trận kề
+
