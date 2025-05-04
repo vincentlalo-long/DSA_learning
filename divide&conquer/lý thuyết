@@ -1,0 +1,19 @@
+• Thuật toán chia để trị
+• Chia bài toán ban đầu thành các bài toán nhỏ hơn (độc lập nhau) nhưng cùng
+dạng với bài toán ban đầu
+• Giải để quy các bài toán nhỏ hơn
+• Tổng hợp lời giải để thu được
+lời giải bài toán cuối cùng
+• Các bài toán con được chia nhỏ
+tới mức có thể giải được trực tiếp
+(nếu chưa đủ nhỏ → chia tiếp)
+
+
+  Một số thuật toán áp dụng chia để trị
+• Thuật toán tìm kiếm nhị phân
+• Thuật toán sắp xếp trộn merge sort, sắp xếp nhanh Quick sort
+• Thuật toán nhân 2 số nguyên lớn: Karatsuba algorithm
+• Thuật toán nhân 2 ma trận: Strassen's Matrix Multiplication
+• Cặp điểm gần nhất – closest pair
+• Cooley–Tukey Fast Fourier Transform (FFT) algorithm
+  
