@@ -1,0 +1,29 @@
+• Danh sách liên kết đơn
+• Là cấu trúc liên kết đơn giản nhất • Mỗi phần tử chỉ có thêm 1 con trỏ để lưu địa chỉ phần tử kế tiếp
+• Ưu điểm so với mảng
+• Không cần khai báo trước số lượng tối đa
+• Dùng bao nhiêu, cấp phát đủ
+• Thêm/xóa các phần tử dễ dàng, không cần dịch (chỉ cần thay đổi giá trị con
+trỏ) • Nhược điểm
+• Chỉ có thể truy cập phần tử một cách tuần tự
+• Mỗi phần tử tốn thêm 1 con trỏ
+
+  Khai báo danh sách liên kết đơn (singly-linked list) : • Có 1 hay nhiều trường dữ liệu (item) chứa dữ liệu cần lưu trữ
+• Có ít nhất 1 con trỏ trỏ đến nút tiếp theo (next) cần nhiều bộ nhớ hơn cấu trúc liên tục.• Cần 1 con trỏ lưu địa chỉ phần tử bắt đầu của cấu trúc
+  struct Node {
+    int data;          // Dữ liệu
+    Node* next;        // Con trỏ tới nút kế tiếp
+};
+struct Node* head = NULL;
+struct Node* second = NULL;
+struct Node* third = NULL;
+// allocate 3 nodes in the heap
+head = (struct Node*)malloc(sizeof(struct Node));
+second = (struct Node*)malloc(sizeof(struct Node));
+third = (struct Node*)malloc(sizeof(struct Node));
+head->data = 1; // assign data in first node
+head->next = second; // Link first node with
+second->data = 2;
+second->next = third;
+third->data = 3; // assign data to third node
+third->next = NULL; // Khởi tạo 1 danh sách liên kết đơn đơn giản với 3 phần tử 
