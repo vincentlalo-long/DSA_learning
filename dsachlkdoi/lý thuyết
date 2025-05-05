@@ -1,0 +1,12 @@
+Danh sách liên kết đôi: 
+• Mỗi nút có 2 con trỏ: con trỏ phải trỏ đến phần tử tiếp sau, con trỏ trái trỏ đến phần tử ngay trước.
+Ưu điểm: có thể duyệt danh sách theo cả hai chiều, thêm/xóa đơn giản hơn so với DS liên kết đơn
+  • Kiểm tra cuối danh sách: con trỏ phải là NULL
+  • Đầu danh sách: con trỏ trái là NULL
+  • Tốn thêm 1 con trỏ để duy trì danh sách, thêm thao tác xử lý với con trỏ thứ 2
+/* Node of a doubly linked list */
+struct Node {
+  int data;
+  struct Node* next; // Pointer to next node in DLL
+  struct Node* prev; // Pointer to previous node in DLL
+  };
