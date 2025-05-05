@@ -1,0 +1,10 @@
+• Stack: hỗ trợ lấy theo thứ tự vào sau ra trước – Last In First Out
+• Ngăn xếp – Stack
+• Thêm vào và lấy ra chỉ diễn ra tại 1 đầu – top
+• Phần tử thêm vào sau cùng sẽ được lấy ra trước tiên – LIFO
+• Đầu còn lại của ngăn xếp là bottom – đáy
+• Các thao tác cơ bản
+• Push(x, S): chèn 1 phần tử x vào ngăn xếp
+• Pop(S): lấy ra 1 phần tử khỏi ngăn xếp
+• Top(S): truy cập phần tử ở đỉnh của ngăn xếp
+• Empty(S): trả về true nếu ngăn xếp rỗng
