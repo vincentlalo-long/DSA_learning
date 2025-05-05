@@ -8,3 +8,45 @@
 • Pop(S): lấy ra 1 phần tử khỏi ngăn xếp
 • Top(S): truy cập phần tử ở đỉnh của ngăn xếp
 • Empty(S): trả về true nếu ngăn xếp rỗng
+
+
+Ứng dụng của Stack : 
+• Quản lý các lời gọi hàm trong ngôn ngữ lập trình
+• Stack trong máy tính
+• Xử lý ngắt • Quản lý bộ nhớ tạm, truy vết (backtrack) • Trong các chương trình biên dịch (compiler) • Sử dụng để tính giá trị biểu thức
+• Chuyển đổi biểu thức dạng trung tố sang hậu tố
+• Kiểm tra dấu ngoặc hợp lệ trong biểu thức
+• Trong trình duyệt web, trình soạn thảo văn bản, phần mềm đồ họa
+• Thao tác Undo/ Redo, Back/Forward
+• Quản lý chức năng quay lại trong ứng dụng (App Navigation) • Đảo ngược chuỗi ký tự hoặc danh sách liên kết đơn
+• Duyệt đồ thị, cây hoặc trong thuật toán quay lui – back tracking, khử đệ quy
+
+• Định giá biểu thức :
+A = b + c * d / e – f • Biểu thức trung tố : toán tử hai ngôi đứng giữa hai toán hạng mà nó tác động, toán tửmột ngôi đứng trước/sau toán hạng. • Biểu thức hậu tố : Toán tử đứng sau toán hạng
+• Ví dụ:
+Trung tố 𝑎 ∗ (𝑏– 𝑐)/𝑑
+Hậu tố 𝑎𝑏𝑐–∗ 𝑑/
+Tiền tố /∗ 𝑎– 𝑏𝑐d
+
+Tính giá trị biểu thức hậu tố :
+Trung tố : (4 * 2) + 5 + (6 * 5)
+Hậu tố : 4 2 * 5 + 6 5 * +
+• Thuật toán: Duyệt biểu thức hậu tố
+• Gặp toán hạng: đẩy vào stack
+• Gặp toán tử 1 ngôi: lấy ra 1 toán hạng trong stack, áp dụng toán tử lên toán hạng và
+đẩy kết quả trở lại stack
+• Gặp toán tử 2 ngôi: lấy 2 toán hạng ở đỉnh stack theo thứ tự toán hạng 2 lấy trước,
+áp dụng toán tử lên 2 toán hạng đó, kết quả lại đẩy vào stack.
+Kết thúc, đưa ra kết quả là giá trị ở đỉnh stack. 
+| **Thao tác** | **STACK** | **Giải thích**                                                                 |
+| ------------ | --------- | ------------------------------------------------------------------------------ |
+| 4            | 4         | Gặp toán hạng, đẩy vào STACK                                                   |
+| 4, 2         | 4, 2      | Gặp toán hạng, đẩy vào STACK                                                   |
+| \*           | 8         | Lấy 2 toán hạng, áp dụng 4 \* 2 = 8, đẩy kết quả vào STACK                     |
+| 8, 4         | 8, 4      | Gặp toán hạng, đẩy vào STACK                                                   |
+| +            | 12        | Lấy 2 toán hạng, TH2 là 4 lấy trước, áp dụng 8 + 4 = 12, đẩy kết quả vào STACK |
+| 12, 6        | 12, 6     | Gặp toán hạng, đẩy vào STACK                                                   |
+| 12, 6, 5     | 12, 6, 5  | Gặp toán hạng, đẩy vào STACK                                                   |
+| \*           | 12, 30    | Lấy 2 toán hạng, TH2 là 5, áp dụng 6 \* 5 = 30, đẩy kết quả vào STACK          |
+| 12, 30       | 12, 30    | Gặp toán tử +, lấy 2 toán hạng, áp dụng 12 + 30 = 42, đẩy kết quả vào STACK    |
+| 42           | 42        | Kết quả cuối cùng của biểu thức                                                |
