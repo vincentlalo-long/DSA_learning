@@ -1,0 +1,10 @@
+• Hàng đợi – Queue // có thêm rear để kiểm soát phần cuối
+• Việc thêm vào và lấy ra được diễnra tại 2 đầu khác nhau
+• Phần tử thêm vào trước tiên sẽđược lấy ra trước tiên: lưu trữ và lấy dữ liệu theo thứ tự vào trước ra trước (FIFO) 
+Các phương thức cơ bản: 
+• enQueue() : thêm một phần tử mới vào queue
+• deQueue() : lấy một phần tử khỏi queue
+• empty() : kiểm tra xem queue có rỗng hay không • front() : trả về giá trị phần tử ở đầu queue, mà không hủy nó
+• Lưu trữ queue
+• Lưu trữ kế tiếp dùng mảng
+• Lưu trữ sử dụng danh sách móc nối
