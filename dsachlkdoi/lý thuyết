@@ -10,3 +10,27 @@ struct Node {
   struct Node* next; // Pointer to next node in DLL
   struct Node* prev; // Pointer to previous node in DLL
   };
+• Một số ứng dụng
+• Quản lý các URL trong Browser 
+• Số lượng URL là không biết trước
+• Thực hiện Back và Forward để di chuyển đến các URL đã thăm và di chuyển tiếp
+• Khi chuyển sang URL mới, sẽ xóa các
+URL đã thăm ở trước (trong danh sách Forward và Back) 
+• Thời gian xử lý O(1)
+
+• Quản lý các thao tác trong các phần mềm đồ họa hoặc soạn thảo văn bản
+• Lưu trữ thao tác/ chuỗi thao tác
+• Thực hiện Undo và Redo
+• Xóa 1 thao tác/chuỗi thao tác
+• Lưu trữ số lượng thao tác không cố định dễ dàng
+• Thời gian xử lý O(1)
+
+Các ứng dụng khác
+• Quản lý bộ nhớ động (Garbage Collection): duyệt qua các khối dễ dàng hơn so với danh sách liên kết đơn
+• Quản lý các tác vụ trong hệ thống đa nhiệm (multitasking systems): 
+• quản lý các tác vụ chờ xử lý
+• Di chuyển qua lại giữa các tác vụ
+• Tổ chức cấu trúc hàng đợi 2 đầu Deque (Double-Ended Queue) 
+• Cài đặt LRU Cache (Least Recently Used Cache) 
+• Quản lý thư viện nhạc hoặc video (Playlist Management): Di chuyển 2 chiềudễ hơn danh sách liên kết đơn (nhưng tốn thêm bộ nhớ phụ) 
+• Quản lý các node trung gian trong hệ thống tàu điện ngầm hoặc bản đồ(Subway System or Map Navigation)
