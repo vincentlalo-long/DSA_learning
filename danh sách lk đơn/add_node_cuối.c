@@ -7,8 +7,8 @@ dãy mới ABCDE
 • Ngược lại, phải duyệt tuần tự
 tìm cuối dãy
 • Nếu dãy rỗng ta sẽ phải cập nhật lại con trỏ đầu dãy  cần truyền vào **
-𝑇(𝑛) = ?
-
+𝑇(𝑛) = O(n)
+// Có thể dùng 1 con trỏ tail để trỏ vào last.
 void append(struct Node** head_ref, int new_data){
   struct Node* new_node = (struct Node*) malloc(sizeof(structNode));
   struct Node *last = *head_ref;
