@@ -8,3 +8,19 @@ Các phương thức cơ bản:
 • Lưu trữ queue
 • Lưu trữ kế tiếp dùng mảng
 • Lưu trữ sử dụng danh sách móc nối
+Ứng dụng
+• Hàng đợi công việc trong hệ điều hành: quản lý các tiến trình process
+• Quản lý in ấn (Print Queue): quản lý các job in, nhất là máy in trong LAN
+• Tính toán lập lịch vòng (Round-robin Scheduling): trong bài toán phân chia thời gian CPU cho các tiến trình
+• Bộ đệm dữ liệu (Data Buffer): network buffer, I/O buffer, Video buffer 
+• Hệ thống hàng đợi trong mạng máy tính: quản lý gửi và nhận các packet 
+• Xử lý tác vụ đa luồng (Multithreading): thread pool, các job chờ dc xử lý
+• Hệ thống xử lý yêu cầu của máy chủ (Server Request Handling): request được xử lýlần lượt, và xếp trong queue để tránh bị drop
+• Mô phỏng hàng đợi thực tế (Queue Simulation) : VD mô phỏng mạng giao thông, mô hìnhmạng,..
+Hệ thống viễn thông (Telecommunications): gửi và nhận các gói tin, dữ liệu trênmạng di động
+• Xử lý luồng công việc (Workflow Processing) 
+• Hệ thống phát nhạc trực tuyến (Music Streaming): các bài hát được thêm vào hàngđợi chờ play
+• Hệ thống phân phối dữ liệu (Data Streaming) 
+• Trình xử lý tác vụ nền (Background Task Processing): các tác vụ được thêm vào hàngđợi và sẽ được xử lý khi có CPU rảnh
+• Xử lý sự kiện trong lập trình GUI (Event Queue in GUI): người dùng tạo event khi nhấn phím, click chuột,…
+• Cấu trúc dữ liệu để tính toán song song (Parallel Processing)
